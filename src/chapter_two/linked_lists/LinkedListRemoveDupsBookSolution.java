@@ -14,10 +14,10 @@ import java.util.Hashtable;
  * When we discover a duplicate element, we remove the element and continue iterating.
  * We can do this all in one pass since we are using a linked list.
  */
-public class LinkedList {
+public class LinkedListRemoveDupsBookSolution {
 
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedListRemoveDupsBookSolution list = new LinkedListRemoveDupsBookSolution();
 
         list.head = new Node(10);
         list.head.next = new Node(12);

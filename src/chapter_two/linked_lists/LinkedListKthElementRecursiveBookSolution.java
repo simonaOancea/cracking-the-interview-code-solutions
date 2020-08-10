@@ -1,9 +1,17 @@
 package chapter_two.linked_lists;
 
-public class LinkedListKthElement {
+/**
+ * Date 31.05.2020
+ * @Author Cracking the interview code
+ *
+ * Implement an algorithm to find the kt to last element of a singly linked list.
+ *
+ * Solution #1: recursive approach
+ */
+public class LinkedListKthElementRecursiveBookSolution {
 
     public static void main(String[] args) {
-        LinkedListKthElement list = new LinkedListKthElement();
+        LinkedListKthElementRecursiveBookSolution list = new LinkedListKthElementRecursiveBookSolution();
 
         list.head = new Node(10);
         list.head.next = new Node (9);
@@ -12,14 +20,7 @@ public class LinkedListKthElement {
         list.head.next.next.next.next = new Node(6);
         list.head.next.next.next.next.next = new Node(8);
 
-        System.out.println("Linked list before removing duplicates : \n");
-        list.printList(head);
-
-        //list.findKthElementToLast(head, 2);
-        //System.out.println("");
-
-        //System.out.println("Linked list after removing 2 elements : \n");
-        //list.printList(head);
+        nthToLast(head, 2);
 
     }
 
@@ -34,20 +35,23 @@ public class LinkedListKthElement {
         }
     }
 
-    public static int nthToLast(LinkedListKthElement node, int k) {
+    public static int nthToLast(Node head, int k) {
 
-        if (node == null) {
+        if (head == null) {
             return 0;
         }
 
-        int i = nthToLast(node, k) + 1;
+        int i = nthToLast(head.next, k) + 1;
 
+        if (i == k) {
+            System.out.println(head.data);
+        }
 
-        return 0;
+        return i;
     }
 
 
-    public void printList(Node node) {
+    public static void printList(Node node) {
         while (node != null) {
             System.out.println(node.data + " ");
             node = node.next;

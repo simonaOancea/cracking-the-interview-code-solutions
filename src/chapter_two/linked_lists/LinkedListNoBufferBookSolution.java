@@ -12,10 +12,10 @@ package chapter_two.linked_lists;
  * through the linked list, and runner which checks all subsequent nodes for duplicates.
  */
 
-public class LinkedListNoBuffer {
+public class LinkedListNoBufferBookSolution {
 
     public static void main(String[] args) {
-        LinkedListNoBuffer list = new LinkedListNoBuffer();
+        LinkedListNoBufferBookSolution list = new LinkedListNoBufferBookSolution();
 
         list.head = new Node(10);
         list.head.next = new Node(12);
@@ -74,7 +74,7 @@ public class LinkedListNoBuffer {
     }
 
 
-    public void printList(Node node) {
+    public static void printList(Node node) {
         while (node != null) {
             System.out.println(node.data + " ");
             node = node.next;
